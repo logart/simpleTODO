@@ -1,0 +1,29 @@
+.check-box > input[type="checkbox"] {
+    display: block;
+    margin : 7px auto;
+}
+
+.description{
+    vertical-align: center;
+}
+
+.add-task-icon{
+    width: 5% !important;
+}
+
+.new-task-description{
+    width: 73% !important;
+    position: relative;
+    top: 5px;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.add-task-button{
+    width: 20% !important;
+    left: -5px;
+    position: relative;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    margin-left: 0px;
+}

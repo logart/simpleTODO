@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/style-developers.css">
+        <link rel="stylesheet" href="css/production.css">
+        <script type="application/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script type="application/javascript" src="js/localStorage.js"></script>
+
+        <script type="text/template" id="edit-project-template">
+            <input type="text" class="project-description-editable" value="{{content}}" placeholder="Here will be project name...">
+        </script>
+
+        <script type="text/template" id="task-template">
+            <div class="task row-fluid">
+                <div class="check-box span1">
+                <input type="checkbox">
+                </div>
+                <div class="description span9">
+                    {{description}}
+                </div>
+                <div class="task-control-panel span2">
+                    <i class="icon-move"></i>
+                    <i class="icon-pencil"></i>
+                    <i class="icon-trash"></i>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="project-template">
+            <div class="project container" data-id="{{project-identity}}" style="display:none;">
+                <div class="header">
+                    <div class="project-header row-fluid">
+                        <span class="span1"><i class="icon-list"></i></span>
+                        <div class="project-description span9">{{project-description}}</div>
+                        <div class="project-control-panel span2">
+                        <i class="icon-pencil"></i>
+                        <i class="icon-trash"></i>                    
+                        </div>
+                    </div>
+                    <div class="add-task-panel row-fluid">
+                        <span class="add-task-icon span1" >
+                            <span class="vertical-plus-component"></span>
+                            <span class="horizontal-plus-component"></span>
+                            <i class="icon-plus"></i>
+                        </span>
+                        <input type="text" class="new-task-description">
+                        <input type="submit" name="add task" class="add-task-button btn btn-success" value="Add Task">
+                    </div>
+                </div>
+                <div class="body">
+                {{tasks-block}}
+                </div>
+            </div>
+        </script>
+
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+        <header>
+            <h1 style="text-transform:uppercase;">simple todo lists</h1>
+            <h2 style="text-transform:uppercase;">from ruby garage</h2>
+        </header>
+
+        <button id="add-project" class="btn-primary"><i class="icon-plus"></i>Add TODO List</button>
+
+        <footer>
+            &copy; Artem Loginov (logart)
+        </footer>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
